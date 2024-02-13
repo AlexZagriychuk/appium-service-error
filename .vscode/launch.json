@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+		{
+			"name": "run select spec (iOS)",
+			"type": "node",
+			"request": "launch",
+			"args": ["wdio.ios.conf.js", "--spec", "${file}"],
+			"cwd": "${workspaceFolder}",
+			"autoAttachChildProcesses": true,
+			"program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+			"console": "integratedTerminal",
+			"skipFiles": [
+				"${workspaceFolder}/node_modules/**/*.js",
+				"${workspaceFolder}/lib/**/*.js",
+				"<node_internals>/**/*.js"
+			]
+		},
+		{
+			"name": "run select spec (Android)",
+			"type": "node",
+			"request": "launch",
+			"args": ["wdio.android.conf.js", "--spec", "${file}"],
+			"cwd": "${workspaceFolder}",
+			"autoAttachChildProcesses": true,
+			"program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+			"console": "integratedTerminal",
+			"skipFiles": [
+				"${workspaceFolder}/node_modules/**/*.js",
+				"${workspaceFolder}/lib/**/*.js",
+				"<node_internals>/**/*.js"
+			]
+		}
+	]
+}
